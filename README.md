@@ -2,6 +2,7 @@
 Mini-projects in python to learn and do!
 
 Projects:
+
 Word Count in a Text File: Write a Python program that reads a text file and counts the occurrences of each word in the file.
 
 Find the Missing Number: Write a Python program to find the missing number in a given sequence of numbers.

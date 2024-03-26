@@ -13,4 +13,4 @@ Projects:
 
 - Binary Search Algorithm: Write a Python program to implement the binary search algorithm to find an element in a sorted list.
 
-- Find Common Elements: Write a Python program to find the common elements between two lists.
+- [DONE] Find Common Elements: Write a Python program to find the common elements between two lists.

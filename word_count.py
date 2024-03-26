@@ -1,4 +1,4 @@
-with open("bird.txt","r") as file:
+with open("lorem.txt","r") as file:
     words = file.read().split()
 
 word_count = len(words)

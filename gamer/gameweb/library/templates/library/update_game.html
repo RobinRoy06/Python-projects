@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Game</title>
+</head>
+<body>
+    <h1>Update Game: {{ game.title }}</h1>
+    <form action="{% url 'update_game' game.pk %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update Game</button>
+    </form>
+    <a href="{% url 'index' %}">Cancel</a>
+</body>
+</html>

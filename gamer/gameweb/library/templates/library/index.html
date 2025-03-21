@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%}Game Rating List{% endblock %}</title>
+</head>
+<body>
+    <ul>
+
+        {% for game in games%}
+            <li>Game title:  {{game.title}} <br> Game description:{{game.description}} <br> Genre:{{game.genre}} <br> Rating: {{game.rating}} <br> Post creation date : {{game.post_creation}}</li>
+
+            <form action="{% url 'view_game' game.id %}" method="post">
+                {% csrf_token%}
+                <button type="submit" >View</button>
+            </form>
+
+            
+
+            <form action="{% url 'update_game' game.id %}" >
+                {% csrf_token%}
+
+                <button type="submit" >Update</button>
+            </form>
+            
+            <form action="{% url 'delete_game' game.id %}" method="post">
+                {% csrf_token%}
+                <button type="submit" >Delete</button>
+            </form>
+
+            
+        {% empty %}
+            <p>No available games</p>
+
+        {%endfor%}  
+        
+
+
+    </ul>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
